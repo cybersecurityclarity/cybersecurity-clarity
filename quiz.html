@@ -73,210 +73,210 @@ const quizData = [
     // CATEGORY 1: Password & Account Security (Questions 0-3)
     {
         category: "Password & Account Security",
-        question: "How many of your accounts use the same or similar password?",
+        question: "How do you manage passwords across your accounts?",
         options: [
-            { text: "All or most", score: 0 },
-            { text: "Around half", score: 2 },
-            { text: "A few", score: 4 },
-            { text: "None — all unique", score: 5 }
+            { text: "I reuse the same simple password for all or most non-critical sites", score: 0 },
+            { text: "I use a few variations of the same password family", score: 2 },
+            { text: "I create unique, complex passwords but have to write some down", score: 4 },
+            { text: "Every account has a unique, long, and complex password", score: 5 }
         ]
     },
     {
         category: "Password & Account Security",
-        question: "Do you use a password manager?",
+        question: "Which tool do you primarily rely on for saving your passwords?",
         options: [
-            { text: "No", score: 0 },
-            { text: "I save passwords in my browser", score: 2 },
-            { text: "I use a free password manager", score: 4 },
-            { text: "I use a dedicated paid manager", score: 5 }
+            { text: "None, I try to memorize them or use a common pattern", score: 0 },
+            { text: "I save them directly in my web browser (like Chrome or Safari)", score: 2 },
+            { text: "I use a free, basic password manager on one device", score: 4 },
+            { text: "I use a paid, reputable password manager with syncing across devices", score: 5 }
         ]
     },
     {
         category: "Password & Account Security",
-        question: "Have you enabled two-factor authentication (2FA) on your main accounts?",
+        question: "How extensively have you enabled Multi-Factor Authentication (MFA)?",
         options: [
-            { text: "None", score: 0 },
-            { text: "A few important ones", score: 2 },
-            { text: "Most major accounts", score: 4 },
-            { text: "All critical accounts", score: 5 }
+            { text: "Only where mandatory, and I use SMS text messages", score: 0 },
+            { text: "On my most critical accounts (banking, email, social), using SMS or email codes", score: 2 },
+            { text: "On all major accounts, primarily using an authenticator app (like Google/Authy)", score: 4 },
+            { text: "On all critical and major accounts, using a physical security key (YubiKey) where available", score: 5 }
         ]
     },
     {
         category: "Password & Account Security",
-        question: "How often do you update your passwords?",
+        question: "What is your password review and update routine?",
         options: [
-            { text: "Never", score: 0 },
-            { text: "Only after I'm locked out or hacked", score: 2 },
-            { text: "Once a year", score: 4 },
-            { text: "Every 3–6 months or when prompted", score: 5 }
+            { text: "I haven't changed my main passwords in years", score: 0 },
+            { text: "I only change passwords when a breach is confirmed or I'm locked out", score: 2 },
+            { text: "I change my most critical passwords (email/bank) annually", score: 4 },
+            { text: "I use my password manager's audit tool to check for weak/breached passwords monthly/quarterly and update as needed", score: 5 }
         ]
     },
 
     // CATEGORY 2: Social Media & Online Behavior (Questions 4-7)
     {
         category: "Social Media & Online Behavior",
-        question: "Are your social media profiles public or private?",
+        question: "What level of detail do you share about your current location and daily life?",
         options: [
-            { text: "All public", score: 0 },
-            { text: "Mostly public", score: 2 },
-            { text: "Mixed", score: 4 },
-            { text: "Mostly private", score: 5 }
+            { text: "I share my current location, check-ins, or travel plans frequently", score: 0 },
+            { text: "I post photos/stories showing location/routine, but delay posting until I leave", score: 2 },
+            { text: "I avoid sharing real-time location and only post travel photos after returning home", score: 4 },
+            { text: "I restrict all location services, avoid check-ins, and keep most profiles private or utilize pseudonyms", score: 5 }
         ]
     },
     {
         category: "Social Media & Online Behavior",
-        question: "Do you share personal details (address, location, travel, birthday) online?",
+        question: "How do you handle your personal information (birthday, phone number, pets' names) on public profiles?",
         options: [
-            { text: "Regularly", score: 0 },
-            { text: "Occasionally", score: 2 },
-            { text: "Rarely", score: 4 },
-            { text: "Never", score: 5 }
+            { text: "My full information is publicly visible on my profiles", score: 0 },
+            { text: "I share some details, but only with 'Friends' or 'Connections'", score: 2 },
+            { text: "I only share vague or incorrect information (e.g., incorrect birthday year)", score: 4 },
+            { text: "I share no information that could be used for identity verification or security questions", score: 5 }
         ]
     },
     {
         category: "Social Media & Online Behavior",
-        question: "Have you reviewed your privacy settings recently?",
+        question: "When you install a new app or sign up for a service, how do you review its permissions?",
         options: [
-            { text: "Never", score: 0 },
-            { text: "Over a year ago", score: 2 },
-            { text: "Within the past year", score: 4 },
-            { text: "Within the past 3–6 months", score: 5 }
+            { text: "I accept all permissions and terms without reading them to proceed quickly", score: 0 },
+            { text: "I quickly skim the permissions but usually approve them", score: 2 },
+            { text: "I review the requested permissions and deny non-essential ones", score: 4 },
+            { text: "I thoroughly review permissions and privacy policy, often choosing an alternative app if the requests seem excessive", score: 5 }
         ]
     },
     {
         category: "Social Media & Online Behavior",
-        question: "How do you react to unknown friend requests or DMs?",
+        question: "How do you react to unknown connection requests or DMs on platforms like LinkedIn/Instagram?",
         options: [
-            { text: "Accept most of them", score: 0 },
-            { text: "Sometimes check their profile", score: 2 },
-            { text: "Usually ignore", score: 4 },
-            { text: "Always verify or ignore completely", score: 5 }
+            { text: "I accept most requests or respond to DMs, assuming they are harmless", score: 0 },
+            { text: "I check their profile for a few seconds before accepting/replying", score: 2 },
+            { text: "I usually ignore requests unless I have a mutual connection or clear professional link", score: 4 },
+            { text: "I always research or cross-reference the sender externally, blocking/reporting anything suspicious or unverified", score: 5 }
         ]
     },
 
     // CATEGORY 3: Data Privacy & Protection (Questions 8-11)
     {
         category: "Data Privacy & Protection",
-        question: "How often do you back up important files?",
+        question: "How often do you back up your critical and non-critical data?",
         options: [
-            { text: "Never", score: 0 },
-            { text: "A few times a year", score: 2 },
-            { text: "Monthly", score: 4 },
-            { text: "Automatically or weekly", score: 5 }
+            { text: "Never, or only save to one device (e.g., laptop hard drive)", score: 0 },
+            { text: "I manually back up critical files occasionally (a few times a year) to a single external drive", score: 2 },
+            { text: "I use an automated cloud service or external drive for most files, running weekly", score: 4 },
+            { text: "I follow the 3-2-1 rule (3 copies, 2 different media, 1 offsite) with automated, encrypted, and regular backups", score: 5 }
         ]
     },
     {
         category: "Data Privacy & Protection",
-        question: "Do you encrypt or password-protect sensitive files?",
+        question: "How do you protect sensitive documents (tax files, legal docs) stored on your cloud or local drives?",
         options: [
-            { text: "Never", score: 0 },
-            { text: "Occasionally", score: 2 },
-            { text: "Most of the time", score: 4 },
-            { text: "Always", score: 5 }
+            { text: "I just save them in a standard folder without any protection", score: 0 },
+            { text: "I rename the files or put a simple folder password on them", score: 2 },
+            { text: "I use file encryption software (like BitLocker or VeraCrypt) or a secure, end-to-end encrypted cloud service for sensitive documents", score: 4 },
+            { text: "All sensitive data is stored on a dedicated, encrypted drive/container with strong, unique passwords", score: 5 }
         ]
     },
     {
         category: "Data Privacy & Protection",
-        question: "How do you dispose of old devices or drives?",
+        question: "How do you handle your browser history, cookies, and tracking prevention?",
         options: [
-            { text: "Sell/discard without wiping", score: 0 },
-            { text: "Factory reset only", score: 2 },
-            { text: "Wipe or reformat", score: 4 },
-            { text: "Secure erase or physical destruction", score: 5 }
+            { text: "I never clear them and use no ad/tracker blockers", score: 0 },
+            { text: "I clear them occasionally and rely on the browser's basic 'Do Not Track' setting", score: 2 },
+            { text: "I use a reputable ad-blocker and a VPN/privacy browser (like Firefox/Brave) for sensitive browsing", score: 4 },
+            { text: "I use a strong ad/tracker blocker, a privacy-focused browser, a VPN for most traffic, and use 'Incognito/Private' mode by default", score: 5 }
         ]
     },
     {
         category: "Data Privacy & Protection",
-        question: "Do you know where your personal data is stored online (cloud, devices, apps)?",
+        question: "How do you securely dispose of old storage devices (hard drives, USBs, phones)?",
         options: [
-            { text: "No idea", score: 0 },
-            { text: "I know some of it", score: 2 },
-            { text: "I have a good idea", score: 4 },
-            { text: "I maintain a list or tracker", score: 5 }
+            { text: "I sell or throw away the device after a simple file delete or factory reset", score: 0 },
+            { text: "I perform a factory reset, but no specific data erasure/overwriting", score: 2 },
+            { text: "I use secure wiping software or physically degauss/destroy the drive", score: 4 },
+            { text: "I ensure complete data destruction via multiple secure erase passes (DoD standards) or physical shredding before disposal", score: 5 }
         ]
     },
 
     // CATEGORY 4: Social Engineering Awareness (Questions 12-15)
     {
         category: "Social Engineering Awareness",
-        question: "When you receive an unexpected email or text asking for urgent action, what do you do?",
+        question: "You receive an urgent text message/email from your 'bank' asking to verify a transaction via a link. What is your first action?",
         options: [
-            { text: "Click the link", score: 0 },
-            { text: "Read it and decide later", score: 2 },
-            { text: "Check sender or hover links", score: 4 },
-            { text: "Verify sender or report it", score: 5 }
+            { text: "Click the link immediately to see what the transaction is", score: 0 },
+            { text: "I check the sender's name/number/email address but still click the link if it looks plausible", score: 2 },
+            { text: "I do not click the link, but I do respond to the email/text asking for confirmation", score: 4 },
+            { text: "I do not click the link and instead independently verify the claim by calling the bank's official, published number or logging into the account via a separate, known URL", score: 5 }
         ]
     },
     {
         category: "Social Engineering Awareness",
-        question: "Have you ever reported a phishing or scam attempt?",
+        question: "How do you typically handle unexpected attachments in emails (e.g., an 'invoice' from an unknown sender)?",
         options: [
-            { text: "Never", score: 0 },
-            { text: "Once or twice", score: 2 },
-            { text: "A few times", score: 4 },
-            { text: "Regularly report suspicious messages", score: 5 }
+            { text: "I download and open the attachment to see what it is", score: 0 },
+            { text: "I open it only if I recognize the file type (e.g., PDF) but still click 'Enable Content' if prompted", score: 2 },
+            { text: "I scrutinize the sender's full email address and only open it in a secure environment (e.g., Google Docs viewer) if I can't verify the sender", score: 4 },
+            { text: "I verify the sender's identity through a separate channel (phone call, new email chain) before downloading or opening any unexpected attachment", score: 5 }
         ]
     },
     {
         category: "Social Engineering Awareness",
-        question: "Do you verify messages from friends or colleagues that seem \"off\"?",
+        question: "Your boss/colleague sends an unexpected message on an unusual platform (e.g., WhatsApp) with an odd request, like buying gift cards. How do you respond?",
         options: [
-            { text: "Rarely", score: 0 },
-            { text: "Sometimes", score: 2 },
-            { text: "Often", score: 4 },
-            { text: "Always", score: 5 }
+            { text: "I assume it's them and immediately follow the instructions", score: 0 },
+            { text: "I send a reply via the same channel asking if they are sure", score: 2 },
+            { text: "I verify the request through their primary work communication channel (like a company email or desk phone)", score: 4 },
+            { text: "I immediately assume it is a scam and report the account or block the sender, then verify with the colleague/boss in person or via their known contact info", score: 5 }
         ]
     },
     {
         category: "Social Engineering Awareness",
-        question: "How confident are you in spotting fake websites or messages?",
+        question: "How do you check a link before you click on it?",
         options: [
-            { text: "Not confident at all", score: 0 },
-            { text: "Somewhat confident", score: 2 },
-            { text: "Confident", score: 4 },
-            { text: "Very confident", score: 5 }
+            { text: "I don't check—I just click based on the text", score: 0 },
+            { text: "I glance at the visible URL, looking for brand names", score: 2 },
+            { text: "I hover my mouse over the link to see the full URL in the bottom corner of my browser", score: 4 },
+            { text: "I always hover, carefully checking the full domain name (not just the displayed text), and use a link scanner (like VirusTotal) if the URL looks complex or suspicious", score: 5 }
         ]
     },
 
     // CATEGORY 5: Device & Network Security (Questions 16-19)
     {
         category: "Device & Network Security",
-        question: "How often do you update your operating system and apps?",
+        question: "What is your routine for applying security updates (OS, applications, firmware)?",
         options: [
-            { text: "Rarely", score: 0 },
-            { text: "When prompted", score: 2 },
-            { text: "Regularly", score: 4 },
-            { text: "Automatically", score: 5 }
+            { text: "I ignore update notifications until the device forces me, or I manually defer them for months", score: 0 },
+            { text: "I apply updates only when I have time or after I see a news story about a major bug", score: 2 },
+            { text: "I enable automatic updates for my OS and core applications", score: 4 },
+            { text: "All my devices are set to automatically install all security patches/updates as soon as they are released, including router firmware", score: 5 }
         ]
     },
     {
         category: "Device & Network Security",
-        question: "How secure is your Wi-Fi?",
+        question: "How is your home Wi-Fi network secured?",
         options: [
-            { text: "Open or default password", score: 0 },
-            { text: "Simple password", score: 2 },
-            { text: "Strong password, WPA2", score: 4 },
-            { text: "WPA3 or advanced router setup", score: 5 }
+            { text: "Open network, or using the default, weak password provided by the ISP", score: 0 },
+            { text: "I've changed the password, but it's simple/short (less than 8 characters) and using WPA2", score: 2 },
+            { text: "A strong, unique password (12+ characters) using WPA2 encryption, with the network name (SSID) hidden", score: 4 },
+            { text: "Using WPA3 encryption (or WPA2-Enterprise), a dedicated Guest Network, and regularly changing the default router admin password", score: 5 }
         ]
     },
     {
         category: "Device & Network Security",
-        question: "Do you use antivirus or endpoint protection?",
+        question: "Do you use dedicated endpoint protection (antivirus/anti-malware)?",
         options: [
-            { text: "None", score: 0 },
-            { text: "Free/basic software", score: 2 },
-            { text: "Paid version", score: 4 },
-            { text: "Managed or business-grade protection", score: 5 }
+            { text: "I don't use any protection beyond what comes pre-installed on the computer", score: 0 },
+            { text: "I use a free antivirus or relying solely on Windows Defender/macOS Gatekeeper", score: 2 },
+            { text: "I use a paid, reputable anti-malware solution actively configured with real-time protection", score: 4 },
+            { text: "I use an advanced, paid security suite (e.g., EDR) that includes proactive features like zero-day exploit protection, dark web monitoring, and VPN", score: 5 }
         ]
     },
     {
         category: "Device & Network Security",
-        question: "Do you secure your mobile devices (PINs, biometrics, remote wipe)?",
+        question: "What security measures are in place for your mobile devices (phone/tablet)?",
         options: [
-            { text: "Not at all", score: 0 },
-            { text: "PIN only", score: 2 },
-            { text: "PIN + biometrics", score: 4 },
-            { text: "PIN + biometrics + remote tracking", score: 5 }
+            { text: "I have no PIN, password, or biometrics set up on my lock screen", score: 0 },
+            { text: "I use a simple 4-digit PIN/pattern or just biometrics", score: 2 },
+            { text: "I use a strong password (6+ digits) or biometrics, and the device is set to auto-lock quickly", score: 4 },
+            { text: "I use a strong password + biometrics, I have remote wipe/tracking enabled, and I do not sideload apps from unofficial stores", score: 5 }
         ]
     }
 ];
