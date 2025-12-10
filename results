@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Personal Security Audit Results">
+    <title>Your Security Score - Cybersecurity Clarity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- html2canvas for certificate generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Cybersecurity Clarity</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Results Container -->
+    <section class="section">
+        <div class="container">
+            <div class="results-container">
+                
+                <!-- Score Display -->
+                <div class="score-display">
+                    <h1 id="result-headline">Your Security Score</h1>
+                    <div class="score-number" id="score-number">0%</div>
+                    <p class="score-label" id="score-subtitle">Calculating your results...</p>
+                </div>
+
+                <!-- Category Breakdown -->
+                <div class="category-scores">
+                    <h2>Your Security Breakdown</h2>
+                    <p style="margin-bottom: 2rem; color: #666;">See how you performed in each security category:</p>
+                    
+                    <div class="category-item">
+                        <div class="category-name">🔐 Password & Account Security</div>
+                        <div class="category-bar">
+                            <div class="category-bar-fill" id="cat-1-bar" style="width: 0%;">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-name">📱 Social Media & Online Behavior</div>
+                        <div class="category-bar">
+                            <div class="category-bar-fill" id="cat-2-bar" style="width: 0%;">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-name">🛡️ Data Privacy & Protection</div>
+                        <div class="category-bar">
+                            <div class="category-bar-fill" id="cat-3-bar" style="width: 0%;">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-name">⚠️ Social Engineering Awareness</div>
+                        <div class="category-bar">
+                            <div class="category-bar-fill" id="cat-4-bar" style="width: 0%;">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="category-name">💻 Device & Network Security</div>
+                        <div class="category-bar">
+                            <div class="category-bar-fill" id="cat-5-bar" style="width: 0%;">0%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personalized Feedback -->
+                <div class="feedback-section" id="feedback-section">
+                    <h2>Your Top Security Risks</h2>
+                    <div id="feedback-content">
+                        <p>Loading your personalized recommendations...</p>
+                    </div>
+                </div>
+
+                <!-- Video Section -->
+                <div class="video-section" id="video-section" style="display: none;">
+                    <h2 style="text-align: center; margin-bottom: 1.5rem;">Watch Your Personalized Security Guide</h2>
+                    <div class="video-container">
+                        <iframe id="video-iframe" src="" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Certificate Section -->
+                <div class="certificate-section" id="certificate">
+                    <h2>🎓 Your Security Awareness Certificate</h2>
+                    <p style="margin-bottom: 1.5rem;">This certifies that</p>
+                    <input type="text" id="user-name-input" placeholder="Enter your name" 
+                           style="font-size: 1.2rem; padding: 0.5rem; border: 2px solid #FFD700; border-radius: 6px; text-align: center; margin-bottom: 1rem; max-width: 400px;">
+                    <div class="certificate-user-name" id="certificate-name">Your Name</div>
+                    <div class="certificate-score-text">
+                        is <strong id="certificate-score">0%</strong> more secure than most internet users
+                    </div>
+                    <p class="certificate-date" id="certificate-date">Completed on [Date]</p>
+                </div>
+
+                <!-- Certificate Actions -->
+                <div class="certificate-actions">
+                    <button class="btn btn-primary" id="download-btn">Download Certificate</button>
+                    <button class="btn btn-secondary" id="share-btn">Share on LinkedIn</button>
+                </div>
+
+                <!-- Email Capture Form -->
+                <div class="email-form">
+                    <h2>Get Your Full Results & Bonus Resources</h2>
+                    <p>Enter your email to receive:</p>
+                    <ul style="text-align: left; max-width: 500px; margin: 1rem auto;">
+                        <li>✓ Detailed security audit report</li>
+                        <li>✓ Personalized action plan</li>
+                        <li>✓ Free cybersecurity resources</li>
+                        <li>✓ Exclusive tips from Adrian</li>
+                    </ul>
+                    
+                    <form id="email-capture-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="hidden" name="score" id="hidden-score">
+                        <button type="submit" class="btn btn-primary btn-full">Get My Full Results</button>
+                    </form>
+                    
+                    <div id="form-message" style="display: none;"></div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="cta-box" style="margin-top: 3rem;">
+                    <h3>Ready to Reach 100% Security Confidence?</h3>
+                    <p style="color: #000; margin-bottom: 1.5rem;">Join <strong>Cybersecurity 101: Security Best Practices for Anyone</strong> and master the skills you need to protect yourself online.</p>
+                    <a href="index.html" class="btn btn-secondary btn-large">Learn More About Cybersecurity 101</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cybersecurity Clarity. Empowering users with security knowledge.</p>
+            <p><a href="resources.html">Free Resources</a> • <a href="quiz.html">Retake the Audit</a> • <a href="about.html">About Adrian</a></p>
+        </div>
+    </footer>
+
+    <!-- Results Logic Script -->
+    <script>
+        // Load results from localStorage
+        const results = JSON.parse(localStorage.getItem('quizResults'));
+        
+        if (!results) {
+            // No results found, redirect to quiz
+            window.location.href = 'quiz.html';
+        } else {
+            displayResults(results);
+        }
+
+        function displayResults(results) {
+            const score = results.totalScore;
+            const categoryScores = results.categoryScores;
+            const weakestCategories = results.weakestCategories;
+            
+            // Update score display
+            document.getElementById('score-number').textContent = score + '%';
+            document.getElementById('certificate-score').textContent = score + '%';
+            document.getElementById('hidden-score').value = score;
+            
+            // Set dynamic headline and subtitle based on score
+            let headline, subtitle;
+            if (score < 40) {
+                headline = "⚠️ You're at High Risk!";
+                subtitle = "Your online habits are leaving you vulnerable to attacks.";
+            } else if (score < 60) {
+                headline = "🚧 You're Vulnerable, But Improving";
+                subtitle = "You have some good habits, but significant gaps remain.";
+            } else if (score < 75) {
+                headline = "🔒 You're Getting Secure!";
+                subtitle = "You're on the right track with solid security practices.";
+            } else if (score < 90) {
+                headline = "🛡️ You're Secure — But Not Invincible";
+                subtitle = "Strong security habits, with room for improvement.";
+            } else {
+                headline = "🏆 Cybersecurity Elite — You're Among the Top 1%";
+                subtitle = "Outstanding! Your security practices are exceptional.";
+            }
+            
+            document.getElementById('result-headline').textContent = headline;
+            document.getElementById('score-subtitle').textContent = subtitle;
+            
+            // Animate category bars
+            setTimeout(() => {
+                document.getElementById('cat-1-bar').style.width = categoryScores["Password & Account Security"] + '%';
+                document.getElementById('cat-1-bar').textContent = categoryScores["Password & Account Security"] + '%';
+                
+                document.getElementById('cat-2-bar').style.width = categoryScores["Social Media & Online Behavior"] + '%';
+                document.getElementById('cat-2-bar').textContent = categoryScores["Social Media & Online Behavior"] + '%';
+                
+                document.getElementById('cat-3-bar').style.width = categoryScores["Data Privacy & Protection"] + '%';
+                document.getElementById('cat-3-bar').textContent = categoryScores["Data Privacy & Protection"] + '%';
+                
+                document.getElementById('cat-4-bar').style.width = categoryScores["Social Engineering Awareness"] + '%';
+                document.getElementById('cat-4-bar').textContent = categoryScores["Social Engineering Awareness"] + '%';
+                
+                document.getElementById('cat-5-bar').style.width = categoryScores["Device & Network Security"] + '%';
+                document.getElementById('cat-5-bar').textContent = categoryScores["Device & Network Security"] + '%';
+            }, 300);
+            
+            // Display personalized feedback for weakest areas
+            displayFeedback(weakestCategories);
+            
+            // Embed video based on score
+            embedVideo(score);
+            
+            // Set certificate date
+            const today = new Date().toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            document.getElementById('certificate-date').textContent = 'Completed on ' + today;
+        }
+
+        function displayFeedback(weakestCategories) {
+            const feedbackMap = {
+                "Password & Account Security": "Your password habits need immediate attention. Start using a password manager and enable two-factor authentication on all critical accounts. Never reuse passwords across different sites.",
+                "Social Media & Online Behavior": "You're sharing too much personal information online. Review your privacy settings, limit what you share publicly, and be cautious about accepting friend requests from unknown people.",
+                "Data Privacy & Protection": "Your data management needs improvement. Set up automatic backups, encrypt sensitive files, and create an inventory of where your personal data is stored online.",
+                "Social Engineering Awareness": "You need to develop better skepticism about unexpected messages. Always verify urgent requests through a different communication channel, and report suspicious emails immediately.",
+                "Device & Network Security": "Your devices and network aren't properly secured. Enable automatic updates, strengthen your Wi-Fi password, and consider using professional-grade security software."
+            };
+            
+            let feedbackHTML = '<div style="background: white; padding: 1.5rem; border-radius: 8px; border: 2px solid #FFD700; margin-bottom: 1rem;">';
+            feedbackHTML += '<h3 style="color: #000; margin-bottom: 1rem;">Priority Actions:</h3>';
+            
+            weakestCategories.forEach((cat, index) => {
+                const [categoryName, categoryScore] = cat;
+                feedbackHTML += `
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: #FFD700; margin-bottom: 0.5rem;">${index + 1}. ${categoryName} (${categoryScore}%)</h4>
+                        <p style="color: #333; margin-bottom: 0;">${feedbackMap[categoryName]}</p>
+                    </div>
+                `;
+            });
+            
+            feedbackHTML += '</div>';
+            feedbackHTML += '<p style="text-align: center; font-weight: 600; color: #000;">Want step-by-step guidance? <a href="index.html" style="color: #FFD700;">Enroll in Cybersecurity 101 →</a></p>';
+            
+            document.getElementById('feedback-content').innerHTML = feedbackHTML;
+        }
+
+        function embedVideo(score) {
+            // Replace these with your actual YouTube/Loom video IDs
+            let videoId;
+            if (score < 60) {
+                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for low scores
+            } else if (score < 75) {
+                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for medium scores
+            } else if (score < 90) {
+                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for high scores
+            } else {
+                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for elite scores
+            }
+            
+            // Show video section and embed
+            const videoSection = document.getElementById('video-section');
+            const videoIframe = document.getElementById('video-iframe');
+            
+            if (videoId) {
+                videoIframe.src = `https://www.youtube.com/embed/${videoId}`;
+                videoSection.style.display = 'block';
+            }
+        }
+
+        // Update certificate name as user types
+        document.getElementById('user-name-input').addEventListener('input', function(e) {
+            const name = e.target.value || 'Your Name';
+            document.getElementById('certificate-name').textContent = name;
+        });
+
+        // Download certificate
+        document.getElementById('download-btn').addEventListener('click', function() {
+            const certificate = document.getElementById('certificate');
+            
+            html2canvas(certificate, {
+                scale: 2,
+                backgroundColor: '#ffffff'
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Cybersecurity_Clarity_Certificate.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        });
+
+        // Share on LinkedIn
+        document.getElementById('share-btn').addEventListener('click', function() {
+            const score = results.totalScore;
+            const text = `I just completed the Cybersecurity Clarity Personal Security Audit and scored ${score}%! How secure are you? Take the free audit at`;
+            const url = window.location.origin + window.location.pathname.replace('results.html', 'index.html');
+            const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+            window.open(linkedInUrl, '_blank');
+        });
+
+        // Handle form submission
+        document.getElementById('email-capture-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                const messageDiv = document.getElementById('form-message');
+                messageDiv.style.display = 'block';
+                
+                if (response.ok) {
+                    messageDiv.className = 'form-message success';
+                    messageDiv.innerHTML = '<strong>Success!</strong> Check your email for your full results and bonus resources. <br><br><a href="index.html" class="btn btn-primary" style="margin-top: 1rem;">Explore Cybersecurity 101 →</a>';
+                    this.reset();
+                } else {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = 'Oops! There was a problem. Please try again.';
+                }
+            }).catch(error => {
+                const messageDiv = document.getElementById('form-message');
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'form-message error';
+                messageDiv.textContent = 'Oops! There was a problem. Please try again.';
+            });
+        });
+    </script>
+</body>
+</html>
