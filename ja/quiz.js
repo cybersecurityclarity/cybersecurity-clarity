@@ -229,24 +229,39 @@ let categoryScores = {
 };
 
 // ===================================
-// DOM ELEMENTS
+// DOM ELEMENTS (will be initialized after page loads)
 // ===================================
 
-const questionText = document.getElementById('question-text');
-const categoryBadge = document.getElementById('category-badge');
-const optionsContainer = document.getElementById('options-container');
-const currentQuestionEl = document.getElementById('current-question');
-const totalQuestionsEl = document.getElementById('total-questions');
-const progressFill = document.getElementById('progress-fill');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const submitBtn = document.getElementById('submit-btn');
+let questionText, categoryBadge, optionsContainer, currentQuestionEl, totalQuestionsEl, progressFill, prevBtn, nextBtn, submitBtn;
 
 // ===================================
 // INITIALIZE QUIZ
 // ===================================
 
 function initQuiz() {
+    // Get DOM elements
+    questionText = document.getElementById('question-text');
+    categoryBadge = document.getElementById('category-badge');
+    optionsContainer = document.getElementById('options-container');
+    currentQuestionEl = document.getElementById('current-question');
+    totalQuestionsEl = document.getElementById('total-questions');
+    progressFill = document.getElementById('progress-fill');
+    prevBtn = document.getElementById('prev-btn');
+    nextBtn = document.getElementById('next-btn');
+    submitBtn = document.getElementById('submit-btn');
+    
+    // Check if elements exist
+    if (!questionText || !categoryBadge || !optionsContainer) {
+        console.error('Quiz elements not found!');
+        return;
+    }
+    
+    // Set up event listeners
+    prevBtn.addEventListener('click', previousQuestion);
+    nextBtn.addEventListener('click', nextQuestion);
+    submitBtn.addEventListener('click', calculateResults);
+    
+    // Display first question
     totalQuestionsEl.textContent = quizData.length;
     displayQuestion();
 }
@@ -417,15 +432,13 @@ function calculateResults() {
 }
 
 // ===================================
-// EVENT LISTENERS
-// ===================================
-
-prevBtn.addEventListener('click', previousQuestion);
-nextBtn.addEventListener('click', nextQuestion);
-submitBtn.addEventListener('click', calculateResults);
-
-// ===================================
 // START QUIZ ON PAGE LOAD
 // ===================================
 
-window.addEventListener('DOMContentLoaded', initQuiz);
+// Wait for DOM to be fully loaded before initializing
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initQuiz);
+} else {
+    // DOM is already loaded
+    initQuiz();
+}
