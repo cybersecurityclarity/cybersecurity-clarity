@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take the Personal Security Audit and discover your cybersecurity score.">
+    <title>Security Audit Quiz - Cybersecurity Clarity</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Cybersecurity Clarity</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <section class="section">
+        <div class="container">
+            <div class="quiz-container">
+                <!-- Progress Bar -->
+                <div class="progress-text">
+                    Question <span id="current-question">1</span> of <span id="total-questions">20</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="question-card">
+                    <div class="category-badge" id="category-badge">Loading...</div>
+                    <h2 class="question-text" id="question-text">Loading question...</h2>
+                    
+                    <!-- Options -->
+                    <div class="options" id="options-container">
+                        <!-- Options will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="quiz-navigation">
+                    <button class="btn btn-secondary" id="prev-btn" style="display: none;">Previous</button>
+                    <button class="btn btn-primary" id="next-btn" disabled>Next Question</button>
+                    <button class="btn btn-primary" id="submit-btn" style="display: none;">See My Results</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cybersecurity Clarity. Empowering users with security knowledge.</p>
+            <p><a href="resources.html">Free Resources</a> • <a href="index.html">Home</a></p>
+        </div>
+    </footer>
+
+    <!-- Load Quiz Script -->
+    <script src="js/quiz.js"></script>
+</body>
+</html>
