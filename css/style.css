@@ -1,5 +1,6 @@
 /* ===================================
    CYBERSECURITY CLARITY - MAIN STYLES
+   Brand Colors: Black (#000000), Yellow (#FFD700), White (#FFFFFF)
    =================================== */
 
 /* Reset & Base Styles */
@@ -25,7 +26,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4 {
-    color: #1a3a52;
+    color: #000000;
     line-height: 1.3;
     margin-bottom: 1rem;
 }
@@ -47,11 +48,11 @@ h3 {
 
 p {
     margin-bottom: 1rem;
-    color: #555;
+    color: #333;
 }
 
 a {
-    color: #4a90e2;
+    color: #FFD700;
     text-decoration: none;
 }
 
@@ -63,7 +64,7 @@ a:hover {
    NAVIGATION
    =================================== */
 .nav {
-    background-color: #ffffff;
+    background-color: #000000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1rem 0;
     position: sticky;
@@ -80,13 +81,13 @@ a:hover {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1a3a52;
+    color: #FFD700;
     text-decoration: none;
 }
 
 .logo:hover {
     text-decoration: none;
-    color: #4a90e2;
+    color: #ffffff;
 }
 
 .nav-links {
@@ -96,13 +97,13 @@ a:hover {
 }
 
 .nav-links a {
-    color: #555;
+    color: #ffffff;
     font-weight: 500;
     text-decoration: none;
 }
 
 .nav-links a:hover {
-    color: #4a90e2;
+    color: #FFD700;
 }
 
 /* ===================================
@@ -122,25 +123,33 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #4a90e2;
-    color: white;
+    background-color: #FFD700;
+    color: #000000;
 }
 
 .btn-primary:hover {
-    background-color: #357ab8;
+    background-color: #FFC700;
     text-decoration: none;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 .btn-secondary {
-    background-color: white;
-    color: #4a90e2;
-    border: 2px solid white;
+    background-color: #000000;
+    color: #FFD700;
+    border: 2px solid #FFD700;
 }
 
 .btn-secondary:hover {
-    background-color: #f0f7ff;
+    background-color: #1a1a1a;
     text-decoration: none;
 }
 
@@ -157,14 +166,14 @@ a:hover {
    HERO SECTION
    =================================== */
 .hero {
-    background: linear-gradient(135deg, #4a90e2 0%, #357ab8 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: white;
     padding: 5rem 0;
     text-align: center;
 }
 
 .hero h1 {
-    color: white;
+    color: #FFD700;
     font-size: 3rem;
     margin-bottom: 1rem;
 }
@@ -182,7 +191,7 @@ a:hover {
 .hero-note {
     margin-top: 1.5rem;
     font-size: 0.95rem;
-    color: white;
+    color: #FFD700;
     opacity: 0.9;
 }
 
@@ -196,6 +205,7 @@ a:hover {
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
+    color: #000000;
 }
 
 .section-subtitle {
@@ -207,11 +217,11 @@ a:hover {
 }
 
 .bg-light {
-    background-color: #f8fafb;
+    background-color: #f8f8f8;
 }
 
 .bg-primary {
-    background: linear-gradient(135deg, #4a90e2 0%, #357ab8 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: white;
 }
 
@@ -220,41 +230,47 @@ a:hover {
 }
 
 /* ===================================
-   FEATURE CARDS
+   FEATURE CARDS - Single Row Layout
    =================================== */
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.5rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .feature-card {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 2px solid #FFD700;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
 }
 
 .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .feature-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: #000000;
 }
 
 .feature-card p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #666;
 }
 
@@ -275,8 +291,8 @@ a:hover {
 .step-number {
     width: 60px;
     height: 60px;
-    background-color: #4a90e2;
-    color: white;
+    background-color: #FFD700;
+    color: #000000;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -306,8 +322,8 @@ a:hover {
 }
 
 .certificate-mockup {
-    background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
-    border: 3px solid #4a90e2;
+    background: #ffffff;
+    border: 3px solid #FFD700;
     border-radius: 12px;
     padding: 3rem;
     max-width: 500px;
@@ -316,7 +332,7 @@ a:hover {
 }
 
 .certificate-mockup h3 {
-    color: #4a90e2;
+    color: #FFD700;
     margin-bottom: 1.5rem;
 }
 
@@ -329,7 +345,7 @@ a:hover {
 .certificate-name {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1a3a52;
+    color: #000000;
     margin: 1rem 0;
 }
 
@@ -348,6 +364,7 @@ a:hover {
     background: white;
     padding: 2rem;
     border-radius: 8px;
+    border: 2px solid #FFD700;
     box-shadow: 0 2px 16px rgba(0,0,0,0.1);
 }
 
@@ -360,7 +377,7 @@ a:hover {
 }
 
 .progress-fill {
-    background: linear-gradient(90deg, #4a90e2 0%, #357ab8 100%);
+    background: linear-gradient(90deg, #FFD700 0%, #FFC700 100%);
     height: 100%;
     transition: width 0.3s ease;
 }
@@ -378,19 +395,20 @@ a:hover {
 
 .question-text {
     font-size: 1.3rem;
-    color: #1a3a52;
+    color: #000000;
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 .category-badge {
     display: inline-block;
-    background-color: #e3f2fd;
-    color: #4a90e2;
+    background-color: #FFD700;
+    color: #000000;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.85rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .options {
@@ -411,13 +429,15 @@ a:hover {
 }
 
 .option-btn:hover {
-    border-color: #4a90e2;
-    background-color: #f0f7ff;
+    border-color: #FFD700;
+    background-color: #fffdf0;
 }
 
 .option-btn.selected {
-    border-color: #4a90e2;
-    background-color: #e3f2fd;
+    border-color: #FFD700;
+    background-color: #FFD700;
+    color: #000000;
+    font-weight: 600;
 }
 
 .quiz-navigation {
@@ -435,18 +455,20 @@ a:hover {
 }
 
 .score-display {
-    background: linear-gradient(135deg, #4a90e2 0%, #357ab8 100%);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
     color: white;
     padding: 3rem;
     border-radius: 12px;
     text-align: center;
     margin-bottom: 2rem;
+    border: 3px solid #FFD700;
 }
 
 .score-number {
     font-size: 4rem;
     font-weight: 700;
     margin: 1rem 0;
+    color: #FFD700;
 }
 
 .score-label {
@@ -458,6 +480,7 @@ a:hover {
     background: white;
     padding: 2rem;
     border-radius: 8px;
+    border: 2px solid #FFD700;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-bottom: 2rem;
 }
@@ -468,7 +491,7 @@ a:hover {
 
 .category-name {
     font-weight: 600;
-    color: #1a3a52;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
@@ -481,27 +504,29 @@ a:hover {
 }
 
 .category-bar-fill {
-    background: linear-gradient(90deg, #4a90e2 0%, #357ab8 100%);
+    background: linear-gradient(90deg, #FFD700 0%, #FFC700 100%);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 0.5rem;
-    color: white;
+    color: #000000;
     font-size: 0.85rem;
     font-weight: 600;
     transition: width 0.5s ease;
 }
 
 .feedback-section {
-    background: #f8fafb;
+    background: #f8f8f8;
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 2rem;
+    border: 2px solid #FFD700;
 }
 
 .feedback-section h3 {
     margin-bottom: 1rem;
+    color: #000000;
 }
 
 .video-section {
@@ -529,7 +554,7 @@ a:hover {
 .certificate-section {
     background: white;
     padding: 3rem;
-    border: 3px solid #4a90e2;
+    border: 3px solid #FFD700;
     border-radius: 12px;
     text-align: center;
     margin: 2rem 0;
@@ -537,14 +562,14 @@ a:hover {
 }
 
 .certificate-section h2 {
-    color: #4a90e2;
+    color: #FFD700;
     margin-bottom: 1rem;
 }
 
 .certificate-user-name {
     font-size: 2rem;
     font-weight: 700;
-    color: #1a3a52;
+    color: #000000;
     margin: 1.5rem 0;
 }
 
@@ -571,6 +596,7 @@ a:hover {
     background: white;
     padding: 2rem;
     border-radius: 8px;
+    border: 2px solid #FFD700;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin: 2rem 0;
 }
@@ -582,7 +608,7 @@ a:hover {
 .form-group label {
     display: block;
     font-weight: 600;
-    color: #1a3a52;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
@@ -596,7 +622,7 @@ a:hover {
 
 .form-group input:focus {
     outline: none;
-    border-color: #4a90e2;
+    border-color: #FFD700;
 }
 
 .form-message {
@@ -631,17 +657,19 @@ a:hover {
     background: white;
     padding: 2rem;
     border-radius: 8px;
+    border: 2px solid #FFD700;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .resource-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
 }
 
 .resource-card h3 {
     margin-bottom: 1rem;
+    color: #000000;
 }
 
 .resource-card p {
@@ -650,10 +678,92 @@ a:hover {
 }
 
 /* ===================================
+   ABOUT PAGE STYLES
+   =================================== */
+.about-hero {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+}
+
+.about-hero .credentials {
+    font-size: 1.1rem;
+    color: #FFD700;
+    opacity: 0.9;
+}
+
+.about-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #FFD700;
+    margin-bottom: 2rem;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.highlight-item {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #FFD700;
+}
+
+.highlight-item strong {
+    color: #000000;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-card {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #FFD700;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-card p {
+    margin-bottom: 0.5rem;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta-box h3 {
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.cta-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* ===================================
    FOOTER
    =================================== */
 .footer {
-    background-color: #1a3a52;
+    background-color: #000000;
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -667,7 +777,7 @@ a:hover {
 }
 
 .footer a {
-    color: white;
+    color: #FFD700;
     opacity: 0.9;
     margin: 0 0.5rem;
 }
@@ -696,9 +806,18 @@ a:hover {
         gap: 1rem;
     }
     
-    .features-grid,
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        max-width: 100%;
+    }
+    
     .steps-grid,
-    .resources-grid {
+    .resources-grid,
+    .highlights-grid {
         grid-template-columns: 1fr;
     }
     
