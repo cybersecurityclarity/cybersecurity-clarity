@@ -269,16 +269,23 @@
         }
 
         function embedVideo(score) {
-            // Replace these with your actual YouTube/Loom video IDs
+            // Map score ranges to your actual YouTube video URLs
             let videoId;
-            if (score < 60) {
-                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for low scores
+            if (score < 40) {
+                // Below 40%: https://youtu.be/NDurO--fWd0
+                videoId = 'NDurO--fWd0';
+            } else if (score < 60) {
+                // 40-60%: https://youtube.com/shorts/0UfIlhH5MjY
+                videoId = '0UfIlhH5MjY';
             } else if (score < 75) {
-                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for medium scores
+                // 60-75%: https://youtube.com/shorts/0LI6eCwhNZk
+                videoId = '0LI6eCwhNZk';
             } else if (score < 90) {
-                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for high scores
+                // 75-89%: https://youtube.com/shorts/0LI6eCwhNZk (same as 60-75)
+                videoId = '0LI6eCwhNZk';
             } else {
-                videoId = 'dQw4w9WgXcQ'; // Replace with your actual video ID for elite scores
+                // 90%: https://youtube.com/shorts/Mr31BEMcZso
+                videoId = 'Mr31BEMcZso';
             }
             
             // Show video section and embed
