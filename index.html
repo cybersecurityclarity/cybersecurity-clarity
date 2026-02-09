@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Take the Personal Security Audit and discover your cybersecurity strengths and gaps.">
-    <title>Cybersecurity Clarity - Personal Security Audit</title>
+    <meta name="description" content="Learn cybersecurity, take free security audits, and access expert resources at Cybersecurity Clarity.">
+    <title>Cybersecurity Clarity - Cybersecurity Education & Resources</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,8 +15,20 @@
                 <a href="index.html" class="logo">Cybersecurity Clarity</a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li class="dropdown">
+                        <a href="courses.html">Courses</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="course.html">Cybersecurity 101</a></li>
+                            <li><a href="ai-101.html">AI 101 (Coming Soon)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="web-design.html">Website Design</a></li>
+                            <li><a href="career-coaching.html">Career Coaching</a></li>
+                        </ul>
+                    </li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -28,89 +40,169 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>How Secure Are You Really?</h1>
-            <p class="hero-subtitle">Take the Personal Security Audit and discover your cybersecurity strengths—and the gaps you didn't know existed.</p>
-            <a href="quiz.html" class="btn btn-primary btn-large">Take the Audit Now</a>
-            <p class="hero-note">✓ 20 questions • 5 minutes • Instant results</p>
+            <h1>Empowering Everyone with Cybersecurity Knowledge</h1>
+            <p class="hero-subtitle">Expert-led courses, free resources, and personalized guidance to help you stay safe online.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                <a href="quiz.html" class="btn btn-secondary btn-large">Take Free Security Audit</a>
+                <a href="course.html" class="btn btn-primary btn-large">Explore Cybersecurity 101</a>
+            </div>
         </div>
     </section>
 
-    <!-- What You'll Discover Section -->
+    <!-- Free Security Audit Section -->
     <section class="section">
-        <div class="container">
-            <h2 class="section-title">What You'll Learn</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>Password Strength</h3>
-                    <p>Discover if your passwords are truly protecting you or putting you at risk.</p>
+        <div class="container" style="max-width: 1000px;">
+            <h2 class="section-title">Start Here: Take the Free Personal Security Audit</h2>
+            <p class="section-subtitle">Discover your cybersecurity strengths and gaps in just 5 minutes. Get personalized recommendations instantly.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem;">
+                <div>
+                    <h3 style="color: #000; margin-bottom: 1rem; font-size: 1.5rem;">Find Out How Secure You Really Are</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">Answer 20 quick questions about your online security habits and get an instant score showing where you're protected—and where you're vulnerable.</p>
+                    
+                    <div style="background: #f8f8f8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #FFD700; margin-bottom: 1.5rem;">
+                        <h4 style="color: #000; margin-bottom: 0.75rem;">What You'll Get:</h4>
+                        <ul style="color: #666; margin-left: 1.5rem;">
+                            <li style="margin-bottom: 0.5rem;">Your overall security score</li>
+                            <li style="margin-bottom: 0.5rem;">Category-by-category breakdown</li>
+                            <li style="margin-bottom: 0.5rem;">Personalized improvement recommendations</li>
+                            <li style="margin-bottom: 0.5rem;">Downloadable security certificate</li>
+                            <li style="margin-bottom: 0.5rem;">Custom video guidance for your score</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="quiz.html" class="btn btn-primary btn-large">Take the Free Audit Now</a>
+                    <p style="color: #888; margin-top: 1rem; font-size: 0.9rem;">✓ No signup required • ✓ 5 minutes • ✓ Instant results</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Social Media Safety</h3>
-                    <p>Learn which online behaviors are exposing your personal information.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Privacy Protection</h3>
-                    <p>Understand how well you're protecting your data from unwanted access.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚠️</div>
-                    <h3>Scam Awareness</h3>
-                    <p>Test your ability to spot and avoid phishing and social engineering attacks.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Device Security</h3>
-                    <p>Find out if your devices and networks are properly secured.</p>
+                
+                <div style="background: white; padding: 2rem; border-radius: 12px; border: 2px solid #FFD700; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                    <div class="certificate-mockup" style="border: 3px solid #FFD700; padding: 2rem; border-radius: 8px;">
+                        <h3 style="color: #FFD700; margin-bottom: 1rem;">🎓 Security Certificate</h3>
+                        <p class="certificate-text">This certifies that</p>
+                        <p class="certificate-name" style="font-size: 1.3rem; color: #000; margin: 0.5rem 0;">[Your Name]</p>
+                        <p class="certificate-text" style="margin-top: 1rem;">is <strong style="color: #FFD700; font-size: 1.3rem;">XX%</strong> more secure than most internet users</p>
+                        <p class="certificate-date" style="margin-top: 1rem; color: #888;">Completed on [Date]</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
+    <!-- Cybersecurity 101 Course Section -->
     <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">How the Audit Works</h2>
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Answer 20 Questions</h3>
-                    <p>Quick, multiple-choice questions about your current security habits.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Get Your Score</h3>
-                    <p>See your overall security score and breakdown by category.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Receive Personalized Advice</h3>
-                    <p>Get specific recommendations to improve your weakest areas.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Download Your Certificate</h3>
-                    <p>Share your security score and show you're taking protection seriously.</p>
+        <div class="container" style="max-width: 1000px;">
+            <h2 class="section-title">Level Up: Cybersecurity 101 Course</h2>
+            <p class="section-subtitle">Turn your audit insights into action with our comprehensive security course. Only $17 for lifetime access.</p>
+            
+            <div style="background: white; padding: 3rem; border-radius: 12px; border: 3px solid #FFD700; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-top: 2rem;">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                        <div style="background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%); padding: 0.5rem 1rem; border-radius: 6px; display: inline-block; margin-bottom: 1rem;">
+                            <span style="color: #000; font-weight: 700; font-size: 0.9rem;">LIMITED TIME: $17 (Regular $121)</span>
+                        </div>
+                        
+                        <h3 style="color: #000; font-size: 2rem; margin-bottom: 1rem;">Get Your Personalized Security Action Plan</h3>
+                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem;">Fix your exact vulnerabilities with step-by-step guidance. No tech skills needed.</p>
+                        
+                        <h4 style="color: #000; margin-bottom: 1rem;">6 Comprehensive Modules:</h4>
+                        <div style="display: grid; gap: 1rem; margin-bottom: 2rem;">
+                            <div style="padding-left: 1.5rem; border-left: 3px solid #FFD700;">
+                                <strong style="color: #000;">Module 1:</strong> Password & Account Security
+                            </div>
+                            <div style="padding-left: 1.5rem; border-left: 3px solid #FFD700;">
+                                <strong style="color: #000;">Module 2:</strong> Social Media & Online Behavior
+                            </div>
+                            <div style="padding-left: 1.5rem; border-left: 3px solid #FFD700;">
+                                <strong style="color: #000;">Module 3:</strong> Data Privacy & Protection
+                            </div>
+                            <div style="padding-left: 1.5rem; border-left: 3px solid #FFD700;">
+                                <strong style="color: #000;">Module 4:</strong> Social Engineering Awareness
+                            </div>
+                            <div style="padding-left: 1.5rem; border-left: 3px solid #FFD700;">
+                                <strong style="color: #000;">Module 5:</strong> Device & Network Security
+                            </div>
+                            <div style="padding-left: 1.5rem; border-left: 3px solid #FFD700;">
+                                <strong style="color: #000;">Module 6:</strong> Bonus Resources & Action Plans
+                            </div>
+                        </div>
+                        
+                        <div style="background: #f8f8f8; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                            <h4 style="color: #000; margin-bottom: 0.75rem;">Everything You Get:</h4>
+                            <ul style="color: #666; margin-left: 1.5rem;">
+                                <li style="margin-bottom: 0.5rem;">Video lessons for each module</li>
+                                <li style="margin-bottom: 0.5rem;">All toolkits, checklists & templates</li>
+                                <li style="margin-bottom: 0.5rem;">$121 in bonus materials</li>
+                                <li style="margin-bottom: 0.5rem;">Lifetime access & updates</li>
+                                <li style="margin-bottom: 0.5rem;">Personalized security action plan</li>
+                            </ul>
+                        </div>
+                        
+                        <a href="course.html" class="btn btn-primary btn-large">Get the Course for $17</a>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); padding: 2rem; border-radius: 8px; text-align: center; border: 2px solid #FFD700;">
+                        <p style="color: #FFD700; font-size: 0.9rem; margin-bottom: 0.5rem;">One-Time Payment</p>
+                        <p style="color: #FFD700; font-size: 4rem; font-weight: 700; margin: 0.5rem 0;">$17</p>
+                        <p style="color: white; font-size: 0.95rem; margin-bottom: 1.5rem; opacity: 0.8;">Lifetime Access</p>
+                        
+                        <div style="border-top: 1px solid rgba(255,215,0,0.3); padding-top: 1.5rem; margin-top: 1.5rem;">
+                            <p style="color: white; font-size: 0.9rem; margin-bottom: 1rem;">🎓 8,000+ Students</p>
+                            <p style="color: white; font-size: 0.9rem; margin-bottom: 1rem;">⭐ Award-Winning Instructor</p>
+                            <p style="color: white; font-size: 0.9rem; margin-bottom: 1rem;">✅ 7-Day Money-Back Guarantee</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificate Preview Section -->
+    <!-- Free Resources Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Your Security Certificate</h2>
-            <p class="section-subtitle">Complete the audit and receive a personalized certificate showing your security awareness level.</p>
-            <div class="certificate-preview">
-                <div class="certificate-mockup">
-                    <h3>🎓 Security Awareness Certificate</h3>
-                    <p class="certificate-text">This certifies that</p>
-                    <p class="certificate-name">[Your Name]</p>
-                    <p class="certificate-text">is <strong>XX% more secure</strong> than most internet users</p>
-                    <p class="certificate-date">Completed on [Date]</p>
+            <h2 class="section-title">Free Cybersecurity Resources</h2>
+            <p class="section-subtitle">Access our library of free tools, guides, and checklists to improve your security today.</p>
+            
+            <div class="resources-grid">
+                
+                <!-- Resource Card 1 -->
+                <div class="resource-card">
+                    <h3>✅ Cybersecurity Safety Checklist</h3>
+                    <p>A comprehensive checklist covering passwords, privacy settings, backups, and more. Perfect for a quick security audit.</p>
+                    <a href="resources.html" class="btn btn-primary">Download Free</a>
                 </div>
+
+                <!-- Resource Card 2 -->
+                <div class="resource-card">
+                    <h3>✅ Top Cybersecurity Tools List</h3>
+                    <p>Our curated list of the best password managers, VPNs, antivirus software, and security tools for everyday users.</p>
+                    <a href="resources.html" class="btn btn-primary">Get the List</a>
+                </div>
+
+                <!-- Resource Card 3 -->
+                <div class="resource-card">
+                    <h3>✅ Top Cybersecurity Newsletters</h3>
+                    <p>Stay informed with our list of reputable cybersecurity newsletters that deliver the latest threats and tips.</p>
+                    <a href="resources.html" class="btn btn-primary">View Newsletters</a>
+                </div>
+
+                <!-- Resource Card 4 -->
+                <div class="resource-card">
+                    <h3>✅ Customizable Action Planner</h3>
+                    <p>A step-by-step planner to help you implement security improvements based on your audit results.</p>
+                    <a href="resources.html" class="btn btn-primary">Download Planner</a>
+                </div>
+
+                <!-- Resource Card 5 -->
+                <div class="resource-card">
+                    <h3>✅ Phishing Simulations & Quizzes</h3>
+                    <p>Test your skills with real-world phishing examples and additional security awareness quizzes.</p>
+                    <a href="resources.html" class="btn btn-primary">Try Simulations</a>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="resources.html" class="btn btn-secondary btn-large">View All Free Resources</a>
             </div>
         </div>
     </section>
@@ -118,9 +210,12 @@
     <!-- CTA Section -->
     <section class="section bg-primary">
         <div class="container text-center">
-            <h2 style="color: white;">Ready to Discover Your Security Score?</h2>
-            <p style="color: white; opacity: 0.95; font-size: 1.1rem; margin-bottom: 2rem;">Join hundreds of people who've already improved their online safety.</p>
-            <a href="quiz.html" class="btn btn-secondary btn-large">Start the Audit</a>
+            <h2 style="color: #FFD700;">Ready to Take Control of Your Online Security?</h2>
+            <p style="color: white; opacity: 0.95; font-size: 1.1rem; margin-bottom: 2rem;">Start with the free audit, then level up with our comprehensive course.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="quiz.html" class="btn btn-secondary btn-large">Take Free Audit</a>
+                <a href="course.html" class="btn btn-primary btn-large" style="background: #FFD700; color: #000;">Get Course for $17</a>
+            </div>
         </div>
     </section>
 
@@ -128,7 +223,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Cybersecurity Clarity. Empowering users with security knowledge.</p>
-            <p><a href="resources.html">Free Resources</a> • <a href="quiz.html">Take the Audit</a></p>
+            <p><a href="resources.html">Free Resources</a> • <a href="quiz.html">Take the Audit</a> • <a href="about.html">About Adrian</a></p>
         </div>
     </footer>
 </body>
