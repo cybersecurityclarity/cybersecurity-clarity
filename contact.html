@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Cybersecurity Clarity for courses, services, or questions.">
+    <title>Contact - Cybersecurity Clarity</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">Cybersecurity Clarity</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p class="hero-subtitle">Questions about courses or services? Want to collaborate? Let's connect.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+        <div class="container" style="max-width: 700px;">
+            <div style="background: white; padding: 3rem; border-radius: 12px; border: 2px solid #FFD700;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Send Me a Message</h2>
+                
+                <!-- Contact Form - Replace with your Formspree endpoint -->
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 1rem;">
+                            <option value="general">General Inquiry</option>
+                            <option value="course">Courses Question</option>
+                            <option value="web-design">Website Design</option>
+                            <option value="career-coaching">Career Coaching</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 1rem; min-height: 150px; font-family: inherit;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full btn-large">Send Message</button>
+                </form>
+                
+                <div id="form-message" style="display: none; margin-top: 1.5rem;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Connect -->
+    <section class="section" style="background: #f8f8f8;">
+        <div class="container" style="max-width: 900px;">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Other Ways to Connect</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 8px; border: 2px solid #FFD700; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💼</div>
+                    <h3 style="color: #000; margin-bottom: 0.5rem;">LinkedIn</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">Connect with me professionally</p>
+                    <a href="https://www.linkedin.com/in/andryrakotomalala" target="_blank" class="btn btn-secondary">View Profile</a>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 8px; border: 2px solid #FFD700; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📚</div>
+                    <h3 style="color: #000; margin-bottom: 0.5rem;">Free Resources</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">Download checklists and guides</p>
+                    <a href="resources.html" class="btn btn-secondary">Browse Resources</a>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 8px; border: 2px solid #FFD700; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
+                    <h3 style="color: #000; margin-bottom: 0.5rem;">Take the Audit</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">Discover your security score</p>
+                    <a href="quiz.html" class="btn btn-secondary">Start Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cybersecurity Clarity. Empowering users with security knowledge.</p>
+            <p><a href="resources.html">Free Resources</a> • <a href="courses.html">Courses</a> • <a href="about.html">About Adrian</a></p>
+        </div>
+    </footer>
+
+    <!-- Form Handling Script -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                const messageDiv = document.getElementById('form-message');
+                messageDiv.style.display = 'block';
+                
+                if (response.ok) {
+                    messageDiv.className = 'form-message success';
+                    messageDiv.innerHTML = '<strong>Message sent!</strong> Thanks for reaching out. I\'ll get back to you within 24-48 hours.';
+                    this.reset();
+                } else {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = 'Oops! There was a problem sending your message. Please try again.';
+                }
+            }).catch(error => {
+                const messageDiv = document.getElementById('form-message');
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'form-message error';
+                messageDiv.textContent = 'Oops! There was a problem. Please try again.';
+            });
+        });
+    </script>
+</body>
+</html>
