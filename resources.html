@@ -114,12 +114,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Cybersecurity Clarity. Empowering users with security knowledge.</p>
-            <p><a href="resources.html">Free Resources</a> • <a href="quiz.html">Take the Audit</a> • <a href="about.html">About Adrian</a></p>
-        </div>
-    </footer>
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
 </body>
 </html>
