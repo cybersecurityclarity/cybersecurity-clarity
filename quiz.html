@@ -11,34 +11,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">Cybersecurity Clarity</a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="courses.html">Courses</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="course.html">Cybersecurity 101</a></li>
-                            <li><a href="ai-101.html">AI 101 (Coming Soon)</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="services.html">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="web-design.html">Website Design</a></li>
-                            <li><a href="career-coaching.html">Career Coaching</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Navigation -->
+<div id="nav-placeholder"></div>
+
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+</script>
 
     <!-- Quiz Container -->
     <section class="section">
@@ -73,13 +55,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Cybersecurity Clarity. Empowering users with security knowledge.</p>
-            <p><a href="resources.html">Free Resources</a> • <a href="index.html">Home</a></p>
-        </div>
-    </footer>
+ <!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
 
     <!-- Inline Quiz Script -->
     <script>
