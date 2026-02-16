@@ -823,10 +823,14 @@ a:hover {
 
     .nav-content {
         flex-wrap: wrap;
+        position: relative;
     }
 
+    /* Hide menu by default on mobile - must be hidden until hamburger is clicked */
     .nav-links {
-        display: none;
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
         position: absolute;
         top: 100%;
         left: 0;
@@ -837,10 +841,14 @@ a:hover {
         background: #000000;
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         border-top: 2px solid #FFD700;
+        z-index: 1001;
     }
 
+    /* Show menu when hamburger is clicked */
     .nav.menu-open .nav-links {
-        display: flex;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .nav-links li {
@@ -1054,13 +1062,15 @@ a:hover {
     }
 }
 /* ===================================
-   DROPDOWN NAVIGATION
+   DROPDOWN NAVIGATION (Desktop only)
    =================================== */
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    position: relative;
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        position: relative;
+    }
 }
 
 .nav-links li {
