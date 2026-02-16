@@ -72,6 +72,7 @@ a:hover {
     z-index: 1000;
 }
 
+
 .nav-content {
     display: flex;
     justify-content: space-between;
@@ -789,49 +790,267 @@ a:hover {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+
+/* Hamburger button - hidden on desktop */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 2px solid #FFD700;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #FFD700;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: currentColor;
+    margin: 0 auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+    .nav-toggle {
+        display: flex;
     }
-    
-    .hero h1 {
-        font-size: 2rem;
+
+    .nav-content {
+        flex-wrap: wrap;
     }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
+
     .nav-links {
-        gap: 1rem;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        background: #000000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        border-top: 2px solid #FFD700;
     }
-    
+
+    .nav.menu-open .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.875rem 20px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #1a1a1a;
+        margin-top: 0;
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+        padding: 0.25rem 0;
+        min-width: auto;
+        border-radius: 6px;
+    }
+
+    .dropdown-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Container & layout */
+    .container {
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    .content-card {
+        padding: 1.25rem !important;
+    }
+
     .features-grid {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .feature-card {
         max-width: 100%;
     }
-    
+
     .steps-grid,
     .resources-grid,
     .highlights-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .certificate-mockup {
+        padding: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .quiz-container {
+        padding: 1.25rem;
+        margin: 1rem auto;
+    }
+
     .quiz-navigation {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .certificate-actions {
         flex-direction: column;
     }
-    
+
+    .score-display {
+        padding: 2rem 1rem;
+    }
+
     .score-number {
-        font-size: 3rem;
+        font-size: 2.75rem;
+    }
+
+    .category-scores,
+    .feedback-section,
+    .email-form {
+        padding: 1.25rem;
+    }
+
+    .certificate-section {
+        padding: 1.5rem;
+    }
+
+    .certificate-user-name {
+        font-size: 1.5rem;
+    }
+
+    /* About page */
+    .about-hero {
+        padding: 2rem 0;
+    }
+
+    .about-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-section {
+        padding: 1.25rem;
+    }
+
+    .highlight-item {
+        padding: 1rem;
+    }
+
+    .testimonial-card {
+        padding: 1rem;
+    }
+
+    .cta-box {
+        padding: 1.5rem;
+    }
+
+    .cta-links {
+        gap: 0.75rem;
+    }
+
+    .cta-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
+
+    .footer .container > div:first-child {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .btn-large {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .content-card {
+        padding: 1rem !important;
+    }
+
+    .score-number {
+        font-size: 2.25rem;
     }
 }
 /* ===================================
@@ -908,14 +1127,3 @@ a:hover {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        background: #1a1a1a;
-        margin-top: 0.5rem;
-    }
-}
